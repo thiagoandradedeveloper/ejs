@@ -9,6 +9,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
 
 app.set('view engine', 'ejs');
+//libera para acessar os arquivos na pasta views
 app.use(express.static(path.join(__dirname, '/views')));
 
 app.get('/home', (req, res) => {
@@ -21,6 +22,7 @@ app.get('/home', (req, res) => {
   res.render('index', dados);
 });
 
+//recebe requisiçoes e retona um json
 app.get('/dado', (req, res) => {
     const dados = {
       nome: 'John Doe',
