@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Exemplo EJS</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
+    </head>
+    <body>
+        
+        <h1>Olá, <%= nome %></h1>
+        <p>Seu e-mail é <%= email %></p>
+        <% if(estado_civil){ %>
+            <h1 style="color: red;">Casado</h1>
+        <% } else { %>
+            <h1 style="color: blue;">Solteiro</h1>
+        <% } %>
+        <h1><%- estado_civil ? nome = 'Thiago' : nome = 'Lucas' %></h1>
+        <h2><%= nome %></h2>
+        <% let people = ['geddy', 'neil', 'alex'] %>
+        <h2><%= people %></h2>
+        <img src="img/simpsons.png" width="350px">
+    </body>
+</html>
