@@ -7,7 +7,6 @@
         <script src="script.js"></script>
     </head>
     <body>
-        
         <h1>Olá, <%= nome %></h1>
         <p>Seu e-mail é <%= email %></p>
         <% if(estado_civil){ %>
@@ -19,6 +18,7 @@
         <h2><%= nome %></h2>
         <% let people = ['geddy', 'neil', 'alex'] %>
         <h2><%= people %></h2>
-        <img src="img/simpsons.png" width="350px">
+        <img src="img/simpsons.png" width="350px"><br>
+        <% for(i = 0; i < 10; i++){ %>Lucas Pereira<br><% } %>
     </body>
 </html>
