@@ -1,0 +1,13 @@
+<button onclick="carregarPaginaEJS()">Carregar</button>
+<div id="conteudo-dinamico"></div>
+<script>
+    // Função para carregar e renderizar a página EJS em tempo real
+    function carregarPaginaEJS() {
+        fetch('/ejs') // Substitua com o URL correto da página EJS
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('conteudo-dinamico').innerHTML = data;
+            })
+            .catch(error => console.error(error));
+    }
+</script>
